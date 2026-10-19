@@ -1,10 +1,12 @@
 import "package:f2/todo.dart";
 
 void main(){
-  Todo task = Todo(1,"купить молоко");
-  print(task.id);
-  print(task.title);
-  print(task.isDone);
+  Todo task1 = Todo(id : 1 , title: "чо сделать");
+  Todo task2 = Todo(id : 2 , title: "что сделать");
+  task1.complete();
+  print(task1);
+  print(task2);
+
 
 
 }

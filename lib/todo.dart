@@ -4,5 +4,14 @@ class Todo {
   bool isDone;
 
   
-  Todo(this.id, this.title, {this.isDone = false});
+  Todo({required this.id, required this.title}) : isDone = false;
+  @override 
+  String toString(){
+    String status = isDone ? "{x}" : "[ ]";
+    return "$status $id. $title";
+
+  }
+  void complete(){
+    isDone = true;
+  }
 }
