@@ -4,10 +4,10 @@ class Todo {
   bool isDone;
 
   
-  Todo({required this.id, required this.title}) : isDone = false;
+  Todo({required this.id, required this.title , this.isDone = false});
   @override 
   String toString(){
-    String status = isDone ? "{x}" : "[ ]";
+    String status = isDone ? "[X]" : "[ ]";
     return "$status $id. $title";
 
   }
