@@ -1,6 +1,13 @@
 import "package:f2/todo.dart";
 import "dart:io";
+import "package:ansicolor/ansicolor.dart";
 void main(){
+
+  final AnsiPen greenPen = AnsiPen()..green();
+  final AnsiPen redPen = AnsiPen()..red();
+  final AnsiPen bluePen = AnsiPen()..blue();
+  final AnsiPen yellowPen = AnsiPen()..yellow();
+
   List<Todo> todos = [];
   printMenu();
 
@@ -99,5 +106,5 @@ void listTodos(List<Todo> todos){
 
     }
   }
-  print("task with id $id not found");
+  print(yellowPen(("task with id $id not found")));
  }
