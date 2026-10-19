@@ -1,5 +1,10 @@
-import 'package:f2/f2.dart' as f2;
+import "package:f2/todo.dart";
 
-void main(List<String> arguments) {
-  print('Hello world: ${f2.calculate()}!');
+void main(){
+  Todo task = Todo(1,"купить молоко");
+  print(task.id);
+  print(task.title);
+  print(task.isDone);
+
+
 }
